@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Beginner's Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="nav-top">
+                <header>CSS Documentation</header>
+                <div class="light-switch"><i class="lni lni-bulb"></i></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#Linking_Your_CSS" class="nav-link">Linking Your CSS</a></li>
+                <li><a href="#CSS_Syntax" class="nav-link">CSS Syntax</a></li>
+                <li><a href="#Selectors" class="nav-link">Selectors</a></li>
+                <li><a href="#Box_Model" class="nav-link">Box Model</a></li>
+                <li><a href="#Responsive_Web_Design" class="nav-link">Responsive Web Design</a></li>
+                <li><a href="#Reference" class="nav-link">Reference</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc">
+            <section id="Introduction" class="main-section">
+                <header>Introduction</header>
+                <p>CSS stands for cascading styles sheet. As it's name implies, CSS is a markup language that allows Html elements to be styled.
+                    Let's paint a picture, HTML is the structure of a webpage and what gives structure to the human body? Bones. CSS is appearance synomymous to the flesh slapped on the bones while Javascript is the brain, giving life, movements to the body. Get the picture now? We will be learning about some core concept of CSS.</p>
+            </section>
+
+            <section id="Linking_Your_CSS" class="main-section">
+                <header>Linking Your CSS</header>
+                <p>Before we get down to all the good stuff, let us take a look at linking our stylesheet. It's important that styles are linked one way or another to your HTML file. Not many developers will admit that they forget to link their stylesheet and spend hours wondering why the styles aren't applying on the webpage &#128518; There are three ways to connect stylesheet to a html file, listed in the order of highly recommended to try to avoid doing this:
+                </p>
+                <div>
+                    <dl>
+                        <dt>External CSS</dt>
+                        <dd>
+                            Every HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element which is a child of the &lt;head&gt; section. If you would use the same stylesheet on another html file, it's recommended that you use the external linking of stylesheet.
+                        </dd>
+                    </dl>
+                    <img src="https://raw.githubusercontent.com/Dr-Oxy/login_signup_page/master/assests/img/code1.png" class="code-img">
+
+                    <dl>
+                        <dt>
+                            Internal CSS
+                        </dt>
+                        <dd>
+                            The &lt;style&gt; element which will contain all of your css styling is imbedded inside the &lt;head&gt; section. Both Html and Css is contained in one page. When there are several elements to be styled, it can make your html page bulky and debugging your code would be nightmarish. It's advisable to have your css in a separate, but whatever floats your boat.
+                        </dd>
+                    </dl>
+                    <img src="https://raw.githubusercontent.com/Dr-Oxy/login_signup_page/master/assests/img/internal2.png" alt="internal css linking" class="code-img">
+
+                    <dl>
+                        <dt>Inline CSS</dt>
+                        <dd>
+                            Third and definitely the least recommended way to style html element.
+                        </dd>
+                    </dl>
+                    <p>
+                        <code> &lt;div style="padding:10px; background-color:blue;"&gt;Box1&lt;/div&gt;</code>
+                    </p>
+                </div>
+            </section>
+
+            <section id="CSS_Syntax" class="main-section">
+                <header>CSS Syntax</header>
+                <p>The typical CSS syntax includes the selector and the declaration block. Take a look at the image below:</p>
+
+                <img src="https://raw.githubusercontent.com/Dr-Oxy/login_signup_page/master/assests/img/css-syntax-1469106898.png" height="120px">
+                <p>Selectors are discussed in the next section. property ranges from text-color, background-color, padding, height, font-size, opacity etc. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">Here's a complete list of MDN css properties and value</a></p>
+            </section>
+
+            <section id="Selectors" class="main-section">
+                <header>Selectors</header>
+                <p>Selectors are used to find or access html elements and style them. There are several kinds of selectors but for the purpose of simplicity, we will stick with the basic selectors.
+                <ul>
+                    <li>Element name selectors e.g h1, p, div, span, table etc.</li>
+                    <li>Class selectors e.g <b>.heading1</b> will select all element with a class of heading1. </li>
+                    <li>Id selectors e.g <b> #bigGuy</b> will select an element with id of bigGuy</li>
+                    <li>Attribute selectors e.g [attr="value"]</li>
+                </ul>
+                Let's take a look at some codes</p>
+
+                <code> <b>&lt; h1 id="bigGuy" class="heading1"&gt; I am the biggest heading element &lt; h1/&gt;</b> </code>
+
+                <p>Let's add a little css in that</p>
+
+                <code>
+                    h1 {
+                    color: red;
+                    font-weight: italic;
+                    background-color: #ddd;
+                    padding: 5px 10px;
+                    }
+                </code>
+
+                <p>Let's take a look at our h1 now: <br> <span>I am the biggest heading element</span></p>
+            </section>
+
+            <section id="Box_Model" class="main-section">
+                <header>Box Model</header>
+                <p>Every element in html is a box with four layers: content, padding, border and margin.</p>
+
+                <div>
+                    <img src="https://raw.githubusercontent.com/Dr-Oxy/login_signup_page/master/assests/img/boxmodel.gif">
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Content box is where text and images appear</li>
+                        <li>Padding is the clear space around the content</li>
+                        <li>Border goes around the box in-between the padding and the margin</li>
+                        <li>Margin is the space outside the box</li>
+                    </ul>
+                </div>
+
+                <p>If you choose to use the standard border box, then border, margin and padding is added to the width and height of an element. What does this mean? Take a look at the code below</p>
+                <code>
+                    div {
+                    background-color: yellow;
+                    height: 50px;
+                    width: 65px;
+                    padding: 20px;
+                    margin: 10px 15px;
+                    border: 5px solid gray
+                    }
+                </code>
+
+                <p>You'd expect the width to be <code>65px</code> and height <code>50px</code>, right? Nope! The total width would be: 65px + {padding-left(20px)} + {padding-right(20px)} + {border-left(5px)} + {border-right(5px)} = 115px and the height? 100px. If you want to avoid these phemomenon, then include <code> box-sizing: border-box;</code> </p>
+            </section>
+
+            <section id="Responsive_Web_Design" class="main-section">
+                <header>Responsive Web Design</header>
+                <p>RWD ranges from accessibility in a mobile phone, tablet, laptop and larger desktop screens. There are factors to consider when building a fully responsive, from favouring units in em or rem than px, using responsive images(SVGs) to structuring with fluid layouts such as <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox</a> and <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Grid</a> to <a href="https://css-tricks.com/a-complete-guide-to-css-media-queries/">Media Queries</a>. Also, you may want to know there are two school of thoughts about what view to build first, with most developers going for mobile firsr rather than desktop first.</p>
+            </section>
+            
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <p>In the course of writing this doc, I relied heavily on information from different website like MDN, W3schools, CSS-tricks.com to name a few.</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const lightBulb = document.querySelector(".light-switch");
+        const container = document.querySelector(".container");
+
+        lightBulb.addEventListener("click", function(){
+	    container.classList.toggle("light-mode");
+        });
+    </script>
+</body>
+</html>

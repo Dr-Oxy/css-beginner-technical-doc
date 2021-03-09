@@ -1,0 +1,117 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #111;
+  color: black;
+}
+
+.container {
+  background-color: #12233b;
+  color: #f4f4f4;
+  padding: 30px;
+  font-size: 20px;
+  line-height: 2;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+header {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+code {
+  color: #111;
+  background-color: #4a96fa;
+  padding: 5px;
+  font-size: 16px;
+  white-space: pre-line;
+  text-align: left;
+}
+
+p span {
+  font-size: 24px;
+  color: red;
+  background-color: #ddd;
+  font-weight: italic;
+  padding: 5px 10px;
+}
+
+p a {
+  color: gray;
+}
+
+img {
+  width: 20rem;
+  margin: 0 auto;
+}
+
+ul.nav-links li {
+  list-style: none;
+  background-color: #4387e0;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+  background-color: #3870ba;
+  transition: all 0.3s;
+}
+
+.nav-link {
+  padding: 5px 15px;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.light-mode {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
+
+  nav {
+    grid-column: 1/5;
+    width: 330px;
+    position: fixed;
+  }
+  main {
+    grid-column: 6/-1;
+  }
+
+  img {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 10px;
+  }
+  .nav-top header {
+    font-size: 20px;
+  }
+}
